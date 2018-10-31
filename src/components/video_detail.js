@@ -2,17 +2,17 @@ import React from "react";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <div>Loading</div>;
+    return <div>Loading...</div>;
   }
 
-  console.log("hello", video);
+  //   console.log("hello", video);
   const videoId = video.id.videoId;
   const url = `https://www.youtube.com/embed/${videoId}`;
 
   return (
     <div className="video-detial col-md-8">
       <div className="embed-responsive embed-responsive-16by9">
-        <iframe className="embed-responsive-item" src={url} frameborder="0" />
+        <iframe className="embed-responsive-item" src={url} frameBorder="0" />
       </div>
 
       <div className="details" />

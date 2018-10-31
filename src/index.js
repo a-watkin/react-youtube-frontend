@@ -14,10 +14,16 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { videos: [] };
+    this.state = {
+      videos: [],
+      selectedVideo: null
+    };
 
     YTSearch({ key: API_KEY, term: "penguins" }, videos => {
-      this.setState({ videos });
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+      });
     });
 
     console.log(this.state.videos);
@@ -28,9 +34,14 @@ class App extends Component {
       <div>
         <h1>Hi</h1>
         <SearchBar />
-        <VideoDetail video={this.state.videos[0]} />
+        <VideoDetail video={this.state.selectedVideo} />
         {/* passing props to VideoList */}
-        <VideoList videos={this.state.videos} />
+        <VideoList
+          // updates index.js app state with selected video
+          // you can do it liks this as both are using the same name
+          onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
+          videos={this.state.videos}
+        />
       </div>
     );
   }
