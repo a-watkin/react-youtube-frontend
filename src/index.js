@@ -4,6 +4,7 @@ import SearchBar from "./components/search_bar";
 import key from "../API_KEY";
 import YTSearch from "youtube-api-search";
 // import SearchBar from "./components/search_bar";
+import VideoList from "./components/video_list";
 
 const API_KEY = key;
 
@@ -17,6 +18,8 @@ class App extends Component {
     YTSearch({ key: API_KEY, term: "penguins" }, videos => {
       this.setState({ videos });
     });
+
+    console.log(this.state.videos);
   }
 
   render() {
@@ -24,6 +27,8 @@ class App extends Component {
       <div>
         <h1>Hi</h1>
         <SearchBar />
+        {/* passing props to VideoList */}
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
