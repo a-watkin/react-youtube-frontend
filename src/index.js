@@ -1,3 +1,4 @@
+import _ from "lodash";
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import SearchBar from "./components/search_bar";
@@ -32,10 +33,15 @@ class App extends Component {
   }
 
   render() {
+    // limits the function to once every 300ms
+    const videoSearch = _.debounce(term => {
+      this.videoSearch(term);
+    }, 300);
+
     return (
       <div>
         <h1>Hi</h1>
-        <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+        <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         {/* passing props to VideoList */}
         <VideoList
