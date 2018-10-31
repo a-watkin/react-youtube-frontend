@@ -19,7 +19,7 @@ class App extends Component {
       this.setState({ videos });
     });
 
-    console.log(this.state.videos);
+    // console.log(this.state.videos);
   }
 
   render() {
