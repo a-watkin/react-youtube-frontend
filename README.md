@@ -1,25 +1,15 @@
-# ReduxSimpleStarter
+# Youtube frontend
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Allows for searching for videos with instant search.
 
-### Getting Started
+Five results are returned, each can be clicked on and will load in the main area to watch.
 
-There are two methods for getting started with this repo.
+These are displayed as embeded videos. Which can be useful for getting around youtube restrictions.
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+Using:
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+1. React
+2. Lodash (to limit search frequency)
+3. ES6
+4. CSS
+5. Youtube API
