@@ -40,7 +40,6 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Hi</h1>
         <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         {/* passing props to VideoList */}
