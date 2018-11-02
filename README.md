@@ -13,3 +13,5 @@ Using:
 3. ES6
 4. CSS
 5. Youtube API
+
+[See this project live on Heroku](https://react-youtube-frontend.herokuapp.com/)
