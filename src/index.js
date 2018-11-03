@@ -2,13 +2,14 @@ import _ from "lodash";
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import SearchBar from "./components/search_bar";
-import key from "../API_KEY";
+import YOUTUBE_KEY from "../API_KEY";
 import YTSearch from "youtube-api-search";
 // import SearchBar from "./components/search_bar";
 import VideoList from "./components/video_list";
 import VideoDetail from "./components/video_detail";
 
-const API_KEY = key;
+console.log(YOUTUBE_KEY);
+const API_KEY = YOUTUBE_KEY;
 
 // Create a new component that produces HTML
 class App extends Component {
